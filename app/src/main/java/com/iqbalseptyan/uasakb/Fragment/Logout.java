@@ -28,7 +28,7 @@ import com.iqbalseptyan.uasakb.R;
  * Use the {@link Logout#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Logout extends Fragment {
+public class Logout extends Fragment  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -42,6 +42,7 @@ public class Logout extends Fragment {
 
     public Logout() {
         // Required empty public constructor
+
     }
 
     /**
@@ -74,12 +75,12 @@ public class Logout extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
-        textView.setText(R.string.hello_blank_fragment);
+        View v = null;
         Preferences.clearLoggedInUser(getActivity().getBaseContext());
         startActivity(new Intent(getActivity().getBaseContext(), LoginActivity.class));
         getActivity().finish();
-        return textView;
+        return v;
+        
     }
 
     // TODO: Rename method, update argument and hook method into UI event
